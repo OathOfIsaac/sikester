@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS sikester_db;
+
+CREATE DATABASE sikester_db;
