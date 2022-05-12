@@ -1,20 +1,32 @@
 {
   "name": "sikester",
   "version": "1.0.0",
-  "description": "",
+  "description": "As a music lover, I want a website where I can share music as well as find new music so that I can dance and have friendly discourse with my peers about music.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OathOfIsaac/sikester.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Isacc Gonzalez, Enrique Jimenez, Krystal Tuttle, and Samantha Wolff",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/OathOfIsaac/sikester/issues"
   },
-  "homepage": "https://github.com/OathOfIsaac/sikester#readme"
+  "homepage": "https://github.com/OathOfIsaac/sikester#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.19.0",
+    "socket.io": "^4.5.0"
+  }
 }
