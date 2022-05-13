@@ -60,3 +60,5 @@ class Post extends Model {
       modelName: 'post'
     }
   );
+
+  model.exports= Post 
