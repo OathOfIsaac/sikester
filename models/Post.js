@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const { post } = require('../controllers');
 
 class Post extends Model {
     static upvote(body, models) {
@@ -61,4 +62,4 @@ class Post extends Model {
     }
   );
 
-  model.exports= Post 
+  module.exports = Post;
