@@ -42,6 +42,16 @@ const userdata = [
     email: 'rnbblues65@aol.com',
     password:'DogFromUp1234'
   },
+  {
+    username: 'KISSmegoodnight',
+    email: '995RockRadio@rockfm.com',
+    password: 'jdnssd3#$4JACK'
+  },
+  {
+    username: 'TheVirtuoso',
+    email: 'OrchestraMaestroJhin@outlook.org',
+    password: 'MyAudienceAwaits4444'
+  }
 ];
 
 const seedUsers = () => User.bulkCreate(userdata, {individualHooks: true});
