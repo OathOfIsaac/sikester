@@ -117,7 +117,7 @@ const commentdata = [
     post_id: 10
   },
   {
-    comment_text: 'Charmander Lorem ipsum dolor sit amet, consectetur adipiscing elit. Charmeleon Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    comment_text: 'Charmander Lorem ipsum dolor sit amet, consectetur adipiscing elit. Charmeleon Lorem ipsum dolor sit amet, consectetudr adipiscing elit.',
     user_id: 3,
     post_id: 8
   },
