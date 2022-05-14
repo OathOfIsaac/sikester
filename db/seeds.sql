@@ -8,7 +8,7 @@ VALUES
 (jungkook stan, kpopprince@gmail.com, southkoreabestkorea)
 (CYB3R_R4V3R, AIRraverchibi@msn.com, h4CK3R-F357)
 (Anime_Is_Trash_And_So_Am_I, JapanEndingAndOP@line.net, PickaCHU1995!)
-(OldJazzSoul, rnbblues65, DogFromUp1234)
+(OldJazzSoul, rnbblues65@aol.com, DogFromUp1234)
 
 INSERT INTO post/* Remember to update with spotify api when implemented */
 (title , post_url, user_id )
