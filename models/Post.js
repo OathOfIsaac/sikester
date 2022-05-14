@@ -13,7 +13,7 @@ class Post extends Model {
         },
         attributes: [
           'id',
-          'post_text',
+          'post_url',
           'title',
           'created_at',
           [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -46,11 +46,13 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    post_text: {
+    post_url: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
+        //if we are doing only post_url
+        isUrl: true
+        //if we wanna do post text len: [1]
       }
     },
     user_id: {

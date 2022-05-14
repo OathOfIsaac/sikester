@@ -69,7 +69,7 @@ const commentdata = [
   },
   {
     comment_text:
-    'Japan air Skate park big ring trucks shuttle stoked rock-ectomy.'
+    'Japan air Skate park big ring trucks shuttle stoked rock-ectomy.',
     user_id: 5,
     post_id: 14
   },
@@ -85,7 +85,7 @@ const commentdata = [
   },
   {
     comment_text:
-    'Schraeder drop gondy, rail fatty slash gear jammer steeps clipless rip bowl couloir bomb hole berm. Huck cruiser crank endo, sucker hole piste ripping ACL huck greasy flow face plant pinner.'
+    'Schraeder drop gondy, rail fatty slash gear jammer steeps clipless rip bowl couloir bomb hole berm. Huck cruiser crank endo, sucker hole piste ripping ACL huck greasy flow face plant pinner.',
     user_id: 2,
     post_id: 20
   },
@@ -102,7 +102,7 @@ const commentdata = [
   },
   {
     comment_text:
-    'Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless.'
+    'Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless.',
     user_id: 9,
     post_id: 16
   },
@@ -204,7 +204,7 @@ const commentdata = [
     post_id: 19
   },
   {
-    comment_text: 'A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didnt even know we were calling him Big Bear. We never had the chance to. Maybe it was the eleven months he spent in the womb. The doctor said there were claw marks on the walls of her uterus. Yeah, well, have you seen the new Mustang?',
+    comment_text: 'Heart attack never stopped old Big Bear. I didnt even know we were calling him Big Bear. We never had the chance to. Maybe it was the eleven months he spent in the womb. The doctor said there were claw marks on the walls.',
     user_id: 9,
     post_id: 19
   },
