@@ -31,13 +31,14 @@ app.set('view engine', 'handlebars');
 
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use(routes);
 app.use(require('./controllers/'));
 
 // sync sequelize models to the database, then turn on the server
+// Important!!! :) change to force: true, turn on server ;), then change to force: false...then it works :D! 
 sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
