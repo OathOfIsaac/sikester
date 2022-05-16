@@ -1,5 +1,5 @@
 
-<!-- 
+{{> post-info post}}
 
 {{#if loggedIn}}
 <form class="comment-form">
@@ -14,9 +14,9 @@
 </form>
 {{/if}}
 
-{{> comments post.comments }}
+{{> comments post.comments}}
 
 {{#if loggedIn}}
 <script src="/public/js/comment.js"></script>
 <script src="/public/js/upvote-post.js"></script>
-{{/if}} -->
+{{/if}}
