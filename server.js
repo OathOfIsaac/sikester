@@ -41,6 +41,7 @@ app.use("/public", express.static('./public/'));
 app.use(require('./controllers'));
 
 // sync sequelize models to the database, then turn on the server
+//after making changes to Model in any way, force true, close server, open server, force false, close server, run "npm run seed"
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening on port 3001!'));
 });
