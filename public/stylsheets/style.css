@@ -7,4 +7,77 @@ body, html {
     height: 100%;
     padding: 0;
     margin: 0;
+    color: white;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+nav {
+    font-size: 20px;
+}
+
+header {
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+}
+
+.header-img {
+    width: 70px;
+    height: 70px;
+}
+
+.logo-image {
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.login-signup-forms {
+    margin-top: 100px;
+}
+
+.signup-form {
+    background-color: #141414;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+.login-form {
+    background-color: #141414;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+.signup-text {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.login-text {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+/* .login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+} */
