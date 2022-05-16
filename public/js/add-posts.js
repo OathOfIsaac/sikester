@@ -2,13 +2,13 @@ async function newPost(event) {
     event.preventDefault();
 
     const title = document.querySelector('input[name="post-title"]').value;
-    const spotify_url = document.querySelector('input[name="spotify_url"]').value;
+    const post_text = document.querySelector('input[name="post-text"]').value;
 
     const response = await fetch(`/api/posts`, {
         method: 'POST',
         body: JSON.stringify({
             title,
-            spotify_url
+            post_text
         }),
         headers: {
             'Content-Type': 'application/json'
@@ -16,7 +16,7 @@ async function newPost(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/home');
+        document.location.replace('/dashboard');
     } else {
         alert(response.statusText)
     }

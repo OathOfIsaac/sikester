@@ -7,18 +7,24 @@
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
+      <label for="post-text">Text:</label>
+      <input type="text" id="post-text" name="post-text" />
     </div>
     <button type="submit" class="btn">Create</button>
   </form>
 </section>
-
+{{#if posts.length}}
 <section>
   <h2>Your Posts</h2>
-  <ol>
+  <ul>
+    {{#each posts as |post|}}
     <li>
-      <a href=''>Edit post</a>
+      {{> post-info post}}
+      <a href='/dashboard/edit/{{post.id}}'>Edit post</a>
     </li>
-  </ol>
+    {{/each}}
+  </ul>
 </section>
+{{/if}}
+
+<script src="/public/js/add-posts.js"></script>

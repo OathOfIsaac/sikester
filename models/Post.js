@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-// create our Post model
+
 class Post extends Model {
   static upvote(body, models) {
     return models.Vote.create({
@@ -13,10 +13,10 @@ class Post extends Model {
         },
         attributes: [
           'id',
-          'post_url',
+          'post_text',
           'title',
           'created_at',
-          [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+          //[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
         include: [
           {
@@ -46,13 +46,11 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    post_url: {
+    post_text: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        //if we are doing only post_url
-        isUrl: true
-        //if we wanna do post text len: [1]
+        len: [1]
       }
     },
     user_id: {

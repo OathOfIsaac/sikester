@@ -5,9 +5,10 @@ const { Post, User, Comment } = require('../models');
 router.get('/', (req, res) => {
   console.log(req.session);
     Post.findAll({
+      order:[['created_at', 'DESC']],
         attributes: [
           'id',
-          'post_url',
+          'post_text',
           'title',
           'created_at'
           //[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -31,8 +32,8 @@ router.get('/', (req, res) => {
         // pass a single post object into the homepage template
         const posts = dbPostData.map(post => post.get({ plain: true }));
         res.render('homepage', {
-          posts
-          //loggedIn: req.session.loggedIn 
+          posts,
+          loggedIn: req.session.loggedIn 
         });
     })
     .catch(err => {
@@ -42,7 +43,7 @@ router.get('/', (req, res) => {
 });
 
 
-/*router.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
@@ -58,10 +59,10 @@ router.get('/post/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post_url',
+      'post_text',
       'title',
       'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+      //[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
       {
@@ -97,6 +98,6 @@ router.get('/post/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-}); */
+});
 
 module.exports = router;
