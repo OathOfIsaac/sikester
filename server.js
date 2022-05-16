@@ -2,7 +2,6 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const exphbs = require('express-handlebars');
-const http = require('http');
 
 const routes = require('./controllers');
 
@@ -37,11 +36,12 @@ app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, '/public')));
+app.use("/public", express.static('./public/'));
 
 
 //app.use(routes);
-app.use(require('./controllers/'));
+app.use(require('./controllers'));
 
 
 //socket.io

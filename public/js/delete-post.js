@@ -10,9 +10,9 @@ async function deletePost(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/home');
+        document.location.replace('/dashboard/');
     } else {
-        alert(respose.statusText);
+        alert(response.statusText);
     }
 }
 
