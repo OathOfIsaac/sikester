@@ -1,4 +1,29 @@
-<article class="post">
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      {{title}}
+    </p>
+    <button class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      {{post_text}}
+      <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+      <br>
+      <time datetime="{{created_at}}">{{created_at}}</time>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a class="card-footer-item" href="/post/{{id}}">{{comments.length}}</a>
+    {{!-- <a href="api/post/{{id}}" class="card-footer-item">Delete</a> --}}
+  </footer>
+</div>
+
+{{!-- <article class="post">
   <div class="title">
     <a href="{{post_text}}" target="_blank">{{title}}</a>
     <p>({{post_text}})</p>
@@ -8,4 +33,4 @@
     |
     <a href="/post/{{id}}">{{comments.length}}</a>
   </div>
-</article>
+</article> --}}
