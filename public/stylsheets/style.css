@@ -87,17 +87,18 @@ header {
 }
 
 .single-posts {
+    background-color: #363636;
     line-height: 0.8;
     border: 2px solid white;
     border-radius: 20px;
-    margin-bottom: 40px;
-    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-top: 20px;
     margin-right: 25px;
     padding: 10px;
 }
 
 .meta {
-    background-color: #363636;
+    background-color: #5f615f;
     border: 1px solid lightgray;
     border-radius: 20px;
     padding: 8px;
