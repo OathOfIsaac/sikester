@@ -1,3 +1,4 @@
+
 <div class="user-posts">
 <article class="post">
   <div class="single-posts">
@@ -6,10 +7,13 @@
   </div>
   <div class="meta">
     <p>({{format_url post_text}})</p>
-    {{vote_count}} By: {{user.username}} on {{format_date created_at}}
+  </div>
+  <div class="user-info">
+     {{vote_count}} By: {{user.username}} on {{format_date created_at}}
     |
-    <a href="/post/{{id}}">Comments: {{comments.length}}</a>
+    <a href="/post/{{id}}" class="font-weight-bold">Comments: {{comments.length}}</a>
   </div>
   </div>
+  <div class="post-border"></div>
 </article>
 </div>
