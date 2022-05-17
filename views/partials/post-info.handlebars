@@ -1,15 +1,19 @@
+
 <div class="user-posts">
 <article class="post">
   <div class="single-posts">
   <div class="title">
     <p class="font-weight-bold"{{post_text}} target="_blank">{{title}}</p>
   </div>
-  <div class="meta">
+  <div class="meta p-3">
     <p>({{format_url post_text}})</p>
-    {{vote_count}} By: {{user.username}} on {{format_date created_at}}
+  </div>
+  <div class="user-info">
+     {{vote_count}} By: {{user.username}} on {{format_date created_at}}
     |
-    <a href="/post/{{id}}">Comments: {{comments.length}}</a>
+    <a href="/post/{{id}}" class="font-weight-bold">Comments: {{comments.length}}</a>
   </div>
   </div>
+  <div class="post-border"></div>
 </article>
 </div>

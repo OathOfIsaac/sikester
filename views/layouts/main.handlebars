@@ -18,8 +18,8 @@
 
       <nav>
         {{#if loggedIn}}
-        <a href="/dashboard">Dashboard</a>
-        <button id="logout" class="btn btn-dark">Logout</button>
+        <a href="/dashboard"><span class="btn btn-secondary">Profile</span></a>
+        <button id="logout" class="btn btn-dark ml-3">Logout</button>
         {{else}}
         <a href="/login">Login</a>
         {{/if}}
