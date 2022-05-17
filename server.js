@@ -2,7 +2,6 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const exphbs = require('express-handlebars');
-const socketio = require('socket.io')
 const http = require('http');
 
 
@@ -53,8 +52,7 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', socket => {
-  console.log('a user connected');
-
+  console.log('Hello Pete')
   //new user
   socket.emit('message', 'Welcome to Sikester!');
 
@@ -65,9 +63,18 @@ io.on('connection', socket => {
   socket.on('disconnect', () => {
     io.emit('message', 'A user has left the chat!')
   })
+  socket.on('message', message => {
+    console.log(message)
+  })
+
+  //listen for comment message
+  socket.on('commentMessage', (comment) => {
+    console.log(comment)
+    io.emit('commentMessage', comment);
+  })
 });
 
 // sync sequelize models to the database, then turn on the server
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   server.listen(PORT, () => console.log('Now listening on port 3001!'));
 });

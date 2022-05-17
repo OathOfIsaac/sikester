@@ -25,16 +25,12 @@
         {{/if}}
       </nav>
     </header>
-
+  <script src="/socket.io/socket.io.js"></script>
+   <script src="/public/js/index.js"></script>
     <main>
       {{{ body }}}
     </main>
   </div>
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/public/js/index.js"></script>
-<script>
-  var socket = io();
-</script>
 
   {{#if loggedIn}}
   <script src="/public/js/logout.js"></script>
