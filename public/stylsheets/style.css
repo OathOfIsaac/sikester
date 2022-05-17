@@ -1,3 +1,4 @@
+/* universal styling */
 * {
     box-sizing: border-box;
   }
@@ -11,6 +12,8 @@ body, html {
     color: white;
 }
 
+
+/* header and navigation styling */
 a {
     text-decoration: none;
     color: white;
@@ -37,6 +40,8 @@ header {
     font-weight: bold;
 }
 
+
+/* login and sign-up page styling */ 
 .logo-image {
     width: 50%;
     display: flex;
@@ -75,9 +80,26 @@ header {
     justify-content: center;
 }
 
-/* .login-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-} */
+
+
+.user-posts {
+    list-style: none;
+}
+
+.single-posts {
+    background-color: #363636;
+    line-height: 0.8;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-right: 25px;
+    padding: 10px;
+}
+
+.meta {
+    background-color: #5f615f;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding: 8px;
+}

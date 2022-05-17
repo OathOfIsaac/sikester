@@ -1,6 +1,8 @@
 async function commentForm(event) {
     event.preventDefault();
 
+    socket.emit('message', 'Anything just fix it :( ')
+
     const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim()
 
     const post_id = window.location.toString().split('/')[
@@ -8,6 +10,10 @@ async function commentForm(event) {
     ];
 
     if (comment_text) {
+        debugger
+        const comment = {username: 'TestUser', comment_text, created_at: Date.now()}
+        socket.emit('commentMessage', comment)
+
         const response = await fetch('/api/comments', {
             method: 'POST',
             body: JSON.stringify({
