@@ -13,6 +13,8 @@ window.onload = () => {
 socket.on('commentMessage', comment => {
   const commentDiv = document.getElementById('comment-list')
   console.log(commentDiv)
+  const section = document.createElement('section')
+
   const newComment = `  
   <section class="comment">
   <div class="meta">
@@ -22,6 +24,7 @@ socket.on('commentMessage', comment => {
     ${comment.comment_text}
   </div>
 </section>`;
+
 
 commentDiv.appendChild(newComment)
 })}
