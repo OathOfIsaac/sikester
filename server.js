@@ -2,7 +2,9 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const exphbs = require('express-handlebars');
+const socketio = require('socket.io')
 const http = require('http');
+
 
 const routes = require('./controllers');
 
@@ -66,6 +68,6 @@ io.on('connection', socket => {
 });
 
 // sync sequelize models to the database, then turn on the server
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   server.listen(PORT, () => console.log('Now listening on port 3001!'));
 });
