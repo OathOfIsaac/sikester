@@ -21,7 +21,7 @@
         <a href="/post/{{post.id}}" class="font-weight-bold">Comments: {{post.comments.length}}</a>
       </div>
     </div>
-    <div class="edit-btns d-flex justify-content-center">
+    <div class="edit-btns d-flex justify-content-around">
       <button type="submit" class="save-post-btn btn btn-dark">Save post</button>
       <button type="button" class="delete-post-btn btn btn-dark">Delete post</button>
     </div>
@@ -29,7 +29,7 @@
   </div>
 </article>
 
-<form class="comment-form">
+<!-- <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
   </div>
@@ -39,7 +39,7 @@
   </div>
 </form>
 
-{{> comments post.comments}}
+{{> comments post.comments}} -->
 
 <script src="/public/js/edit-post.js"></script>
 <script src="/public/js/delete-post.js"></script>

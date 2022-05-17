@@ -12,6 +12,7 @@ body, html {
     color: white;
 }
 
+/*---------------------------------------------------*/
 
 /* header and navigation styling */
 a {
@@ -41,8 +42,9 @@ header {
     font-weight: bold;
 }
 
+/*-----------------------------------------------------------*/
 
-/* login and sign-up page styling */ 
+/* login and signup page styling */ 
 .logo-image {
     width: 50%;
     display: flex;
@@ -81,6 +83,7 @@ header {
     justify-content: center;
 }
 
+/*-----------------------------------------------------------*/
 
 /* homepage styling */
 .title {
@@ -117,6 +120,7 @@ header {
     margin-top: 8px;
 }
 
+/*-----------------------------------------------------------*/
 
 /* create new post styling */
 .logo-image-profile {
@@ -147,6 +151,7 @@ header {
     margin-right: 25px;
 }
 
+/*-----------------------------------------------------------*/
 
 /* edit post styling */
 .edit-post-page {
@@ -164,9 +169,9 @@ header {
 }
 
 .save-post {
-    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .delete-post {
-    margin-left: 50px;
+    margin-right: 50px;
 }
