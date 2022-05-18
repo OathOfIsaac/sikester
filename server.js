@@ -71,7 +71,7 @@ io.on('connection', socket => {
   //listen for comment message
   socket.on('commentMessage', (comment) => {
     console.log(comment)
-    io.emit('commentMessage', comment);
+    socket.broadcast.emit('commentMessage', comment);
   })
 });
 
