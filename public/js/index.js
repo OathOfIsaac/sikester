@@ -21,13 +21,12 @@ socket.on('commentMessage', (comment) => {
   ${comment.comment_text}
   `;
 
+  commentDiv.append(newComment)
 
-Element.prototype.appendAfter = function () {
-  element.parentNode.insertBefore(this, newComment.nextSibling)
-}, false;
+
+//Element.prototype.appendAfter = function () {
+  //element.parentNode.insertBefore(this, newComment.nextSibling)
+//}, false;
 
 })}
 
-socket.on('reload', function (data) {
-  location.reload()
-})
