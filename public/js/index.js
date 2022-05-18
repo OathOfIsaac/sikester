@@ -1,7 +1,7 @@
 const socket = io()
 socket.emit('message', "Hello there...")
 
-socket.emit('commentMessage', 'Random what?')
+
 
 socket.on('message', message => {
   console.log(message)
@@ -11,17 +11,15 @@ socket.on('message', message => {
 window.onload = () => {
 //comment submission
 socket.on('commentMessage', comment => {
-  const commentDiv = document.getElementById('comment-list')
+  const commentDiv = document.getElementById('comment-text')
   console.log(commentDiv)
-  const newComment = `  
-  <section class="comment">
-  <div class="meta">
-    ${comment.username} on ${comment.created_at}
-  </div>
-  <div class="text">
-    ${comment.comment_text}
-  </div>
-</section>`;
 
-commentDiv.appendChild(newComment)
+  const newComment = `
+    ${comment.comment_text}`;
+
+commentDiv.append(newComment)
+
+
 })}
+
+socket.emit('commentMessage', newComment)
