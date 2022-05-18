@@ -48,32 +48,25 @@ app.use(require('./controllers'));
 
 
 //socket.io
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/main');
-});
-
 io.on('connection', socket => {
-  console.log('Hello Pete')
-  //new user
-  socket.emit('message', 'Welcome to Sikester!');
-
-  //user has joined
-  socket.broadcast.emit('message', 'A user has joined the chat');
-
-  //user has left
-  socket.on('disconnect', () => {
-    io.emit('message', 'A user has left the chat!')
-  })
-  socket.on('message', message => {
-    console.log(message)
-  })
-
   //listen for comment message
   socket.on('commentMessage', (comment) => {
     console.log(comment)
-    io.emit('commentMessage', comment);
+    socket.broadcast.emit('commentMessage', comment);
   })
 });
+
+io.on('connection', socket => {
+  socket.on('status added', function(status){
+    addStatus(status,function(res){
+      if(res){
+        socket.broadcast.emit('refresh feed', status)
+      } else {
+        socket.broadcast.emit('error')
+      }
+    })
+  })
+})
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
