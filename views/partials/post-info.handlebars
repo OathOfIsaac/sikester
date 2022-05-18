@@ -6,7 +6,8 @@
     <p class="font-weight-bold"{{post_text}} target="_blank">{{title}}</p>
   </div>
   <div class="meta p-3">
-    <p>({{format_url post_text}})</p>
+    {{!-- format_url under this --}}
+    <p>{{post_text}}</p>
   </div>
   <div class="user-info">
      {{vote_count}} By: {{user.username}} on {{format_date created_at}}
