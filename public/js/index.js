@@ -3,7 +3,7 @@ const socket = io()
 function timedRefresh(timeoutPeriod) {
   setTimeout("location.reload(true);",timeoutPeriod);
 }
-window.onload = timedRefresh(10000)
+window.onload = timedRefresh(60000)
 //comment submission
 socket.on('commentMessage', (comment) => {
   const commentDiv = document.getElementById('comment-text')
