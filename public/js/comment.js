@@ -10,7 +10,6 @@ async function commentForm(event) {
     ];
 
     if (comment_text) {
-        debugger
         const comment = {username: 'TestUser', comment_text, created_at: Date.now()}
         socket.emit('commentMessage', comment)
 
