@@ -3,18 +3,12 @@ const { Post } = require('../models');
 const postdata = [
   {
     title: `What’s your favorite song sang by someone who WASN’T the band’s lead singer?`,
-    post_text: `I’m sure there are more popular/famous songs out there, but my favorite is “Shackled” by Keith Kane (guitarist) of Vertical Horizon.
-
-    It sticks out to me because I didn’t know it was sung by someone other than the lead singer until I saw them live.
-    
-    I already liked the song and was excited to hear them play the song. I was wondering why stage hands were putting ear buds into the guitarists ears… and then he suddenly stepped up and started singing!
-    
-    https://youtu.be/Oq6DG-Sm2zU`,
+    post_text: `I’m sure there are more popular/famous songs out there, but my favorite is “Shackled” by Keith Kane (guitarist) of Vertical Horizon.`,
     user_id: 10
   },
   {
-    title: 'Morbi non quam nec dui luctus rutrum.',
-    post_text: 'https://open.spotify.com/track/6Zu3aw7FfjAF9WA0fA81Oq?si=9e8650d283614b28',
+    title: 'Rian Johnson’s Star Wars Trilogy Has Been Delayed at Lucasfilm',
+    post_text: 'Good, disney is trash anyway',
     user_id: 8
   },
   {
