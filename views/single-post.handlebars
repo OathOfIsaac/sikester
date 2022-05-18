@@ -47,15 +47,9 @@
 
 {{/if}} -->
 
-
-
-
-
-
-<!--
 <div>
-By: {{user.username}} on {{format_date created_at}} {{> comments post.comments}} 
-</div> -->
+{{> comments post.comments}} 
+</div>
 
 {{#if loggedIn}}
 <script src="/public/js/comment.js"></script>
