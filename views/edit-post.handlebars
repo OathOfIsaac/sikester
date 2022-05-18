@@ -1,0 +1,46 @@
+<article>
+  <a href="/dashboard" class="ml-4"> &larr; Back to profile</a>
+  <div class="edit-post-page">
+  <h2 class="edit-post-text mt-4">
+    Edit Post
+  </h2>
+  <form class="edit-post-form form-group ml-5 mr-4">
+    <div class="single-posts">
+      <div class="title">
+        <p class="font-weight-bold">Edit title: </p>
+        <input name="post-title" type="text" value="{{post.title}}" class="form-control mb-3"/>
+      </div>
+
+      <div class="meta p-3">
+        <span>({{post.post_text}})</span>
+      </div>
+
+      <div class="user-info mt-3">
+        {{post.vote_count}} By you on: {{format_date post.created_at}}
+          |
+        <a href="/post/{{post.id}}" class="font-weight-bold">Comments: {{post.comments.length}}</a>
+      </div>
+    </div>
+    <div class="edit-btns d-flex justify-content-around">
+      <button type="submit" class="save-post-btn btn btn-dark">Save post</button>
+      <button type="button" class="delete-post-btn btn btn-dark">Delete post</button>
+    </div>
+  </form>
+  </div>
+</article>
+
+<!-- <form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+
+{{> comments post.comments}} -->
+
+<script src="/public/js/edit-post.js"></script>
+<script src="/public/js/delete-post.js"></script>
+<script src="/public/js/comment.js"></script>

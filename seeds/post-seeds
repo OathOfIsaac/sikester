@@ -1,0 +1,109 @@
+const { Post } = require('../models');
+
+const postdata = [
+  {
+    title: `What’s your favorite song sang by someone who WASN’T the band’s lead singer?`,
+    post_text: `I’m sure there are more popular/famous songs out there, but my favorite is “Shackled” by Keith Kane (guitarist) of Vertical Horizon.`,
+    user_id: 10
+  },
+  {
+    title: 'Rian Johnson’s Star Wars Trilogy Has Been Delayed at Lucasfilm',
+    post_text: 'Good, disney is trash anyway',
+    user_id: 8
+  },
+  {
+    title: 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.',
+    post_text: 'https://open.spotify.com/track/1PckUlxKqWQs3RlWXVBLw3?si=8a82aeb2ce104aa2',
+    user_id: 1
+  },
+  {
+    title: 'Nunc purus.',
+    post_text: 'https://open.spotify.com/track/6Xom58OOXk2SoU711L2IXO?si=2da1d9b242b8446f',
+    user_id: 4
+  },
+  {
+    title: 'Pellentesque eget nunc.',
+    post_text: 'https://open.spotify.com/track/1rDQ4oMwGJI7B4tovsBOxc?si=179694fad93f480e',
+    user_id: 7
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+    post_text: 'https://open.spotify.com/track/3vySEUpD0tc801F2WZDLYw?si=198fc14a2c1b4470',
+    user_id: 4
+  },
+  {
+    title: 'In hac habitasse platea dictumst.',
+    post_text: 'https://open.spotify.com/track/7DwcBgdzqhFJltEaV1XF81?si=436c3a1224d347bf',
+    user_id: 1
+  },
+  {
+    title: 'Morbi non quam nec dui luctus rutrum.',
+    post_text: 'https://open.spotify.com/track/1r9xUipOqoNwggBpENDsvJ?si=b130b2b8dc0349af',
+    user_id: 1
+  },
+  {
+    title: 'Duis ac nibh.',
+    post_text: 'https://open.spotify.com/track/18asYwWugKjjsihZ0YvRxO?si=9b37e041730c4418',
+    user_id: 9
+  },
+  {
+    title: 'Curabitur at ipsum ac tellus semper interdum.',
+    post_text: 'https://open.spotify.com/track/6I3mqTwhRpn34SLVafSH7G?si=afc0b086e7f64c66',
+    user_id: 5
+  },
+  {
+    title: 'In hac habitasse platea dictumst.',
+    post_text: 'https://open.spotify.com/track/5MMW4CZsZiZt2iuqAXzzWC?si=c730e72eb39d4691',
+    user_id: 3
+  },
+  {
+    title: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.',
+    post_text: 'https://open.spotify.com/track/6CDzDgIUqeDY5g8ujExx2f?si=8404daaa45f14aac',
+    user_id: 10
+  },
+  {
+    title: 'Donec dapibus.',
+    post_text: 'https://open.spotify.com/track/6Uj1ctrBOjOas8xZXGqKk4?si=fcec76ce13b44988',
+    user_id: 8
+  },
+  {
+    title: 'Nulla tellus.',
+    post_text: 'https://open.spotify.com/track/7mFj0LlWtEJaEigguaWqYh?si=6dab6bd1068f4cbf',
+    user_id: 3
+  },
+  {
+    title: 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.',
+    post_text: 'https://open.spotify.com/track/59CfNbkERJ3NoTXDvoURjj?si=72696fa6d96f4591',
+    user_id: 3
+  },
+  {
+    title:
+      'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.',
+    post_text: 'https://open.spotify.com/track/5HCyWlXZPP0y6Gqq8TgA20?si=ecb4ab5084e4482f',
+    user_id: 7
+  },
+  {
+    title: 'In hac habitasse platea dictumst.',
+    post_text: 'https://open.spotify.com/track/6Z165JvPnS8PYvGW8oLGLc?si=bda46beebc5f47ed',
+    user_id: 6
+  },
+  {
+    title: 'Etiam justo.',
+    post_text: 'https://open.spotify.com/track/0U1W2LZVUX7qTm7dDpqxh6?si=9aa59772480d463e',
+    user_id: 4
+  },
+  {
+    title: 'Nulla ut erat id mauris vulputate elementum.',
+    post_text: 'https://open.spotify.com/track/6PERP62TejQjgHu81OHxgM?si=db5e752deddd4c61',
+    user_id: 6
+  },
+  {
+    title: 'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
+    post_text: 'https://open.spotify.com/track/27NovPIUIRrOZoCHxABJwK?si=2349fdbea3e34ce1',
+    user_id: 7
+  }
+];
+
+const seedPosts = () => Post.bulkCreate(postdata);
+
+module.exports = seedPosts;

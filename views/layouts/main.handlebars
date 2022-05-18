@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sikester</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/stylsheets/style.css">
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>
+        <a href="/" class="main-header">sikester</a>
+      </h1>
+
+      <nav>
+        {{#if loggedIn}}
+        <a href="/dashboard"><span class="btn btn-secondary">Profile</span></a>
+        <button id="logout" class="btn btn-dark ml-3">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
+  <script src="/socket.io/socket.io.js"></script>
+   <script src="/public/js/index.js"></script>
+    <main>
+      {{{ body }}}
+    </main>
+  </div>
+
+  {{#if loggedIn}}
+  <script src="/public/js/logout.js"></script>
+  {{/if}}
+  
+</body>
+
+</html>

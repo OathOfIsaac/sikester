@@ -1,0 +1,58 @@
+
+<div class="ml-4">
+  {{> post-info post}}
+</div> 
+
+{{#if loggedIn}}
+
+<div class="row entire-comment-row">
+  
+  <div class="col-4">
+      <img alt="grey s logo" class="logo-image-comments d-flex flex-column" src="https://i.pinimg.com/originals/5d/10/d9/5d10d98db2f88b601b55c0809e598f26.png">
+  </div>
+
+<form class="comment-form form-group mt-5 col-4">
+  <h3>Add A Comment:</h3>
+  <div>
+    <textarea name="comment-body" class="comment-text p-1 mb-3 mt-3" placeholder="Enter text here"></textarea>
+  </div>
+  {{#if comments.length}}
+
+<div class="single-posts">
+  <div class="title">
+    <p class="font-weight-bold">By: {{user.username}} {{format_date created_at}}</p>
+  </div>
+  <div class="meta p-3">
+    <p>{{> comments post.comments}}</p>
+  </div>
+</div>
+
+{{/if}} 
+
+  <div>
+    <button type="submit" class="btn btn-dark">Add comment</button>
+  </div>
+</form>
+
+<div class="col-4">
+      <img alt="grey s logo" class="logo-image-comments d-flex flex-column" src="https://i.pinimg.com/originals/5d/10/d9/5d10d98db2f88b601b55c0809e598f26.png">
+</div>
+
+</div>
+
+
+</div>
+
+{{/if}}
+
+
+<!-- -->
+
+<div>
+{{> comments post.comments}} 
+</div>
+
+{{#if loggedIn}}
+<script src="/public/js/comment.js"></script>
+<script src="/public/js/upvote-post.js"></script>
+{{/if}}
